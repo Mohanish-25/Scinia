@@ -2,7 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="high_emphaisis">#140A06</color>
+    <color name="high_emphasis">#140A06</color>
     <color name="low_emphasis">#472D23</color>
     <color name="drag_handler">#DBDBDB</color>
     <color name="pink_grad1">#FF3485</color>
