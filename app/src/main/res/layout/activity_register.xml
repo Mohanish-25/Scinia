@@ -1,9 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.auth.RegisterActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:text="Sign Up to Connect"
+        android:textSize="26sp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="@color/high_emphasis"
+        android:fontFamily="@font/sen_semibold" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:layout_alignParentStart="true"
+        android:text="Be a part of the community that values love and connection. Livestream and call effortlessly with the ones who matter."
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@color/low_emphasis"
+        android:fontFamily="@font/sen" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:hintTextColor="@color/edittext_color"
+        app:boxStrokeWidth="1dp"
+        app:placeholderText="John Doe"
+        android:hint="Full Name"
+        app:startIconDrawable="@drawable/envelope"
+        app:startIconTint="@color/edittext_color"
+        app:boxStrokeColor="@color/edittext_color"
+        android:layout_below="@+id/description"
+        android:layout_marginHorizontal="40dp"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:textColor="@color/edittext_color" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:hintTextColor="@color/edittext_color"
+        app:boxStrokeWidth="1dp"
+        app:placeholderText="email@domain.com"
+        android:hint="Email Address"
+        app:startIconDrawable="@drawable/envelope"
+        app:startIconTint="@color/edittext_color"
+        app:boxStrokeColor="@color/edittext_color"
+        android:layout_below="@+id/name"
+        android:layout_marginHorizontal="40dp"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:textColor="@color/edittext_color" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:hintTextColor="@color/edittext_color"
+        app:boxStrokeWidth="1dp"
+        app:placeholderText="********"
+        android:hint="Password"
+        app:startIconDrawable="@drawable/lock"
+        app:startIconTint="@color/edittext_color"
+        app:boxStrokeColor="@color/edittext_color"
+        android:layout_below="@+id/email"
+        android:layout_marginHorizontal="40dp"
+        android:layout_centerHorizontal="true"
+        app:endIconMode="password_toggle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:textColor="@color/edittext_color" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        app:cornerRadius="10dp"
+        android:text="Sign up"
+        android:paddingVertical="15dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/sen_medium"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/high_emphasis"
+        android:layout_below="@+id/password" />
+
+
+    <TextView
+        android:id="@+id/signIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Sign in"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/register"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@color/high_emphasis"
+        android:fontFamily="@font/sen" />
+
+    <TextView
+        android:id="@+id/policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By proceeding with the app, you agree to our terms and conditions and privacy Policy."
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="100dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/high_emphasis"
+        android:fontFamily="@font/sen" />
+
+</RelativeLayout>

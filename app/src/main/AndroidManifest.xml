@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.StreamingApp">
+        android:theme="@style/Theme.Scinia">
         <activity
             android:name=".ui.options.OptionsActivity"
             android:exported="false" />
