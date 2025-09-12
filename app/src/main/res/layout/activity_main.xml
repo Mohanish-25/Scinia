@@ -14,14 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:contentDescription="@string/app_name"
-        android:background="@drawable/bottom_fade_bg" />
-
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -48,9 +40,9 @@
             android:layout_height="65dp"
             android:padding="20dp"
             android:background="@drawable/bg_bottom_nav_center"
-            android:tint="@color/white"
             android:layout_gravity="center"
-            android:src="@drawable/video" />
+            android:src="@drawable/video"
+            app:tint="@color/white" />
 
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
