@@ -2,13 +2,16 @@ package com.mohanishdesale.streamingapp.ui.splash
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.mohanishdesale.streamingapp.MainActivity
 import com.mohanishdesale.streamingapp.R
-import com.mohanishdesale.streamingapp.ui.auth.LoginActivity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,10 +23,11 @@ class SplashActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        Handler().postDelayed({
-            startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+        CoroutineScope(Dispatchers.IO).launch {
+            delay(3000)
+            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             finish()
-        }, 3000)
+
+        }
     }
 }

@@ -15,4 +15,5 @@
     <color name="pink_grad3">#FF6C56</color>
     <color name="btn_second">#F4F4F4</color>
     <color name="unselected_text">#7C726E</color>
+    <color name="dark_bg">#070402</color>
 </resources>
